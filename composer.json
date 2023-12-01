@@ -1,0 +1,11 @@
+{
+    "name": "sagormax/am-challenge-part1",
+    "description": "Challenge: API Based Plugin",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "App\\": "src/"
+      }
+    }
+}
