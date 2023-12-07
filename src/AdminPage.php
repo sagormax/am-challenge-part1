@@ -14,11 +14,11 @@ class AdminPage
    */
   public function am_api_admin_menu() {
     add_menu_page(
-      __('AM Admin EMAIL', AM_API_ADMIN),
-      __('AM EMAIL', AM_API_ADMIN),
+      __('AM Admin Users', AM_API_ADMIN),
+      __('AM Users', AM_API_ADMIN),
       'manage_options',
-      'am_api_mail/api-mail-page.php',
-      array(&$this, 'am_api_mail_lists'),
+      'am_api_user/api-user-page.php',
+      array(&$this, 'am_api_user_lists'),
       'dashicons-email',
       80
     );
@@ -27,7 +27,7 @@ class AdminPage
   /**
    * Menu page content
    */
-  public function am_api_mail_lists() {
+  public function am_api_user_lists() {
     $data = (new UserLists())->data();
     var_dump($data);
 

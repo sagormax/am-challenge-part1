@@ -15,8 +15,12 @@ class UserLists
   /**
    * Fetch data
    */
-  public function fetch($url)
+  public function fetch($url = '')
   {
+    if ($url === '') {
+      $url = $this->url;
+    }
+  
     $response = wp_remote_get($url, array(
       'method' => 'GET'
     ));
